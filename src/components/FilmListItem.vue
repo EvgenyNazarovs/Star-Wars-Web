@@ -1,12 +1,24 @@
 <template lang="html">
-<li>{{film.title}}</li>
+<li @click="onClick">{{film.title}}</li>
 </template>
 
 <script>
 
+import {eventBus} from '@/main.js'
+
 export default {
   name: 'FilmListItem',
-  props: ['film']
+  props: ['film'],
+  data() {
+    return {
+    selectedFilm: {}
+  }
+  },
+  methods: {
+    onClick(){
+      eventBus.$emit('selected-film', this.film)
+    }
+  }
 }
 </script>
 
