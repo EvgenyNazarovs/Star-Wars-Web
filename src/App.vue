@@ -12,6 +12,8 @@ import FilmList from './components/FilmList';
 import FilmListItem from './components/FilmListItem';
 import FilmDetail from './components/FilmDetail';
 import {eventBus} from './main.js';
+import VueMoment from 'vue-moment';
+
 
 export default {
   name: 'App',
@@ -23,7 +25,7 @@ export default {
   data(){
     return {
       films: [],
-      selectedFilm: null
+      selectedFilm: null,
     }
   },
   mounted(){
