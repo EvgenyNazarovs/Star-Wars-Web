@@ -1,6 +1,7 @@
 <template lang="html">
 <div>
-    <h1>Star Wars Films</h1>
+
+    <h1>STAR WARS ENCYCLOPEDIA</h1>
     <FilmList :films="films"></FilmList>
     <FilmDetail v-if="selectedFilm" :film="selectedFilm"></FilmDetail>
 </div>
@@ -40,5 +41,24 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
+body {
+  background-image: url('https://win.heart.co.uk/starwars-galaxy/img/bg-fallback.jpg');
+  color: #fff;
+  width: 100vw;
+  display: block;
+  text-align: center;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+</style>
+
+<style scoped>
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 </style>

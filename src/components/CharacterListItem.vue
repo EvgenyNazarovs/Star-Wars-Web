@@ -1,10 +1,11 @@
 <template lang="html">
-  <li>
-           Name: <b>{{character.name}}</b>
-    <span> Height: {{character.height | toMeters}}</span>
+  <div class="character-item">
+          <div class="character-name"> <b>{{character.name | upperCase}}</b></div>
+    <div class="character-detail"> Height: {{character.height | toMeters}}
     <p>Homeworld: {{homeworld.name}}</p>
     <p>Terrain: {{homeworld.terrain}}</p>
-  </li>
+  </div>
+</div>
 </template>
 
 <script>
@@ -35,11 +36,26 @@ export default {
 </script>
 
 <style lang="css" scoped>
-li {
-  list-style: none;
-  color: darkslategrey;
-  line-height: 1.4;
-  font-size: 1.2em;
-  width: 100%
+.character-item {
+  /* list-style: none; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-style: solid #fff 1px;
+  list-style-position: inside;
+  font-size: 18px;
+}
+
+.character-name {
+  float: left;
+  width: 35%;
+  text-align: left;
+}
+
+.character-detail {
+  float: left;
+  width: 50%;
+  text-align: left;
+
 }
 </style>
